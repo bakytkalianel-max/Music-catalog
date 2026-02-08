@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="Remove lab 2" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bakytkalianel-max&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/bakytkalianel-max/labs-and-hws-py.git&quot;,
+    &quot;accountId&quot;: &quot;ceed20ed-89e0-43a0-80c8-ba4c623bc863&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="38vWrs6hfARsQevCrCoKrs9vpNW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.f1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acer/PycharmProjects/PythonProject/lab 4&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\PythonProject\lab 4" />
+      <recent name="C:\Users\Acer\PycharmProjects\PythonProject\lab 3" />
+      <recent name="C:\Users\Acer\PycharmProjects\PythonProject\lab 2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Acer\PycharmProjects\PythonProject\lab 1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="f1" type="PythonConfigurationType" factoryName="Python">
+      <module name="PythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="C:\Users\Acer\PycharmProjects\PythonProject\lab 1\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-3944b0c99280-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.30387.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="" />
+      <created>1769680728520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769680728520</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add solution for task 10">
+      <option name="closed" value="true" />
+      <created>1770261595942</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770261595942</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add solution for task 11">
+      <option name="closed" value="true" />
+      <created>1770262377691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770262377691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add solution for task 1">
+      <option name="closed" value="true" />
+      <created>1770262599453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770262599453</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add solution for task 2">
+      <option name="closed" value="true" />
+      <created>1770262719437</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770262719437</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add solution for task 3">
+      <option name="closed" value="true" />
+      <created>1770262800578</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770262800578</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add solution for task 4">
+      <option name="closed" value="true" />
+      <created>1770262894711</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1770262894712</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add solution for task 5">
+      <option name="closed" value="true" />
+      <created>1770262957382</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1770262957382</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add solution for task 6">
+      <option name="closed" value="true" />
+      <created>1770263017842</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770263017842</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add solution for task 7">
+      <option name="closed" value="true" />
+      <created>1770263134409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770263134409</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add solution for task 8">
+      <option name="closed" value="true" />
+      <created>1770263185136</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1770263185136</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add solution for task 9">
+      <option name="closed" value="true" />
+      <created>1770263239489</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770263239489</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add solution for task 12">
+      <option name="closed" value="true" />
+      <created>1770263763634</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1770263763634</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add solution for task 13">
+      <option name="closed" value="true" />
+      <created>1770264857330</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1770264857331</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add solution for task 14">
+      <option name="closed" value="true" />
+      <created>1770266617256</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1770266617256</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add solution for task 15">
+      <option name="closed" value="true" />
+      <created>1770267508968</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1770267508968</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add solution for task 16">
+      <option name="closed" value="true" />
+      <created>1770267816672</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1770267816672</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add solution for task 17">
+      <option name="closed" value="true" />
+      <created>1770268330714</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1770268330714</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add solution for task 18">
+      <option name="closed" value="true" />
+      <created>1770269181248</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1770269181248</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add solution for task 18">
+      <option name="closed" value="true" />
+      <created>1770269527782</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1770269527782</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add solution for task 19">
+      <option name="closed" value="true" />
+      <created>1770269816577</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1770269816577</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add solution for task 20">
+      <option name="closed" value="true" />
+      <created>1770269968267</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1770269968267</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add solution for task 21">
+      <option name="closed" value="true" />
+      <created>1770373990198</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1770373990198</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add solution for task 22">
+      <option name="closed" value="true" />
+      <created>1770374241082</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1770374241082</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add solution for task 23">
+      <option name="closed" value="true" />
+      <created>1770374516540</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1770374516540</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add solution for task 24">
+      <option name="closed" value="true" />
+      <created>1770374846244</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1770374846244</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add solution for task 25">
+      <option name="closed" value="true" />
+      <created>1770375065407</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1770375065407</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add solution for task 26">
+      <option name="closed" value="true" />
+      <created>1770375213907</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1770375213907</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add solution for task 27">
+      <option name="closed" value="true" />
+      <created>1770375407636</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1770375407636</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add solution for task 28">
+      <option name="closed" value="true" />
+      <created>1770375577667</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1770375577667</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add solution for task 29">
+      <option name="closed" value="true" />
+      <created>1770375814062</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1770375814062</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add solution for task 30">
+      <option name="closed" value="true" />
+      <created>1770376071302</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1770376071302</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add solution for task 1(dict and set)">
+      <option name="closed" value="true" />
+      <created>1770444631123</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1770444631123</updated>
+    </task>
+    <task id="LOCAL-00033" summary="dict and set">
+      <option name="closed" value="true" />
+      <created>1770445261611</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1770445261611</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add solution for task 6" />
+    <MESSAGE value="Add solution for task 7" />
+    <MESSAGE value="Add solution for task 8" />
+    <MESSAGE value="Add solution for task 9" />
+    <MESSAGE value="Add solution for task 12" />
+    <MESSAGE value="Add solution for task 13" />
+    <MESSAGE value="Add solution for task 14" />
+    <MESSAGE value="Add solution for task 15" />
+    <MESSAGE value="Add solution for task 16" />
+    <MESSAGE value="Add solution for task 17" />
+    <MESSAGE value="Add solution for task 18" />
+    <MESSAGE value="Add solution for task 19" />
+    <MESSAGE value="Add solution for task 20" />
+    <MESSAGE value="Add solution for task 21" />
+    <MESSAGE value="Add solution for task 22" />
+    <MESSAGE value="Add solution for task 23" />
+    <MESSAGE value="Add solution for task 24" />
+    <MESSAGE value="Add solution for task 25" />
+    <MESSAGE value="Add solution for task 26" />
+    <MESSAGE value="Add solution for task 27" />
+    <MESSAGE value="Add solution for task 28" />
+    <MESSAGE value="Add solution for task 29" />
+    <MESSAGE value="Add solution for task 30" />
+    <MESSAGE value="Add solution for task 1(dict and set)" />
+    <MESSAGE value="dict and set" />
+    <option name="LAST_COMMIT_MESSAGE" value="dict and set" />
+  </component>
+</project>
