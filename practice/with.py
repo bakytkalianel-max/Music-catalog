@@ -43,3 +43,14 @@ with open("comp.csv", "w", encoding="utf-8", newline="") as f:
         writer.writerow([
             name,
             name.capitalize()])
+
+data="""2026-02-01;user_1;LOGIN
+2026-02-01;user_2;LOGIN
+2026-02-01;user_1;BUY;120
+2026-02-01;user_3;LOGIN
+2026-02-01;user_2;BUY;300
+2026-02-01;user_1;BUY;50
+2026-02-01;user_2;LOGOUT
+"""
+with open("../lab 2/shop_logs.txt", "w", encoding="utf-8") as f:
+    f.write(data)
