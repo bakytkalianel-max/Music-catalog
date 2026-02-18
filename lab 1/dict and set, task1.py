@@ -32,3 +32,23 @@ def merge_dicts_sum(d1, d2):
 a = {"x": 1, "y": 2}
 b = {"y": 3, "z": 4}
 print(merge_dicts_sum(a, b))
+
+#4
+def filter_sets(sets_list):
+    result = []
+    for s in sets_list:
+        if len(s) > 3:
+            has_negative = False
+            has_even = False
+
+            for num in s:
+                if num < 0:
+                    has_negative = True
+                if num % 2 == 0:
+                    has_even = True
+
+            if not has_negative and has_even:
+                result.append(s)
+    return result
+sets = [{1,2,3,4}, {1,-2,3,4}, {1,3,5,7}, {2,4,6,8}]
+print(filter_sets(sets))
