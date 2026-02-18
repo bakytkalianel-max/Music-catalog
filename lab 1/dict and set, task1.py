@@ -121,3 +121,16 @@ def common_elements_all(sets_list):
     return result
 sets = [{1,2,3}, {2,3,4}, {2,3,5}]
 print(common_elements_all(sets))
+
+#10
+filter_dict = lambda d: {
+    k: sorted([x for x in v if x % 2 != 0])
+    for k, v in d.items()
+    if [x for x in v if x % 2 != 0]
+}
+data = {
+    "a": [1, 2, 3, 4],
+    "b": [2, 4, 6],
+    "c": [5, 7, 8]
+}
+print(filter_dict(data))
