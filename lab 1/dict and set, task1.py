@@ -172,3 +172,22 @@ def invert_dict_strict(d):
     return result
 data = {"a": 1, "b": 2, "c": 1}
 print(invert_dict_strict(data))
+
+#14
+def top_k_frequent(nums, k):
+    freq = {}
+    for num in nums:
+        if num not in freq:
+            freq[num] = 0
+        freq[num] += 1
+    items = list(freq.items())
+    items.sort(key=lambda x: (-x[1], x[0]))
+    if k > len(items):
+        k = len(items)
+
+    result = set()
+    for i in range(k):
+        result.add(items[i][0])
+    return result
+nums = [1,1,2,2,2,3,3,4]
+print(top_k_frequent(nums, 2))
