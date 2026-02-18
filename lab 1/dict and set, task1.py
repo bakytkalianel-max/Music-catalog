@@ -66,3 +66,25 @@ data = {
     "grape": 7
 }
 print(top_keys(data))
+
+#6
+def deep_sum(d):
+    total = 0
+    for value in d.values():
+        if isinstance(value, int):
+            total += value
+
+        elif isinstance(value, list):
+            for item in value:
+                if isinstance(item, int):
+                    total += item
+
+        elif isinstance(value, dict):
+            total += deep_sum(value)
+    return total
+data = {
+    "a": 5,
+    "b": [1, 2, 3],
+    "c": {"x": 10, "y": [4, 5]}
+}
+print(deep_sum(data))
