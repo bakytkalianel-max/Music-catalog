@@ -88,3 +88,11 @@ data = {
     "c": {"x": 10, "y": [4, 5]}
 }
 print(deep_sum(data))
+
+#7
+unique_even = lambda s1, s2: {
+    x for x in s1.symmetric_difference(s2) if x % 2 == 0
+}
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+print(unique_even(a, b))
