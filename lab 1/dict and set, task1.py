@@ -110,3 +110,14 @@ data = {
     "c": "banana"
 }
 print(sort_dict_by_value_length(data))
+
+#9
+def common_elements_all(sets_list):
+    if not sets_list:
+        return set()
+    result = sets_list[0].copy()
+    for s in sets_list[1:]:
+        result = result.intersection(s)
+    return result
+sets = [{1,2,3}, {2,3,4}, {2,3,5}]
+print(common_elements_all(sets))
