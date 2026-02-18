@@ -134,3 +134,16 @@ data = {
     "c": [5, 7, 8]
 }
 print(filter_dict(data))
+
+#11
+def group_by_length(words):
+    result = {}
+    for word in words:
+        length = len(word)
+        if length not in result:
+            result[length] = []
+        if word not in result[length]:
+            result[length].append(word)
+    return result
+words = ["cat", "dog", "apple", "car", "dog", "banana"]
+print(group_by_length(words))
