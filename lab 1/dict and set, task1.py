@@ -96,3 +96,17 @@ unique_even = lambda s1, s2: {
 a = {1, 2, 3, 4}
 b = {3, 4, 5, 6}
 print(unique_even(a, b))
+
+#8
+def sort_dict_by_value_length(d):
+    items = []
+    for key in d:
+        items.append((key, d[key]))
+    items.sort(key=lambda x: (len(x[1]), x[0]))
+    return items
+data = {
+    "a": "apple",
+    "b": "kiwi",
+    "c": "banana"
+}
+print(sort_dict_by_value_length(data))
