@@ -155,3 +155,20 @@ filter_strings = lambda s: {
 }
 data = {"apple", "hello", "world", "abcde", "abcda"}
 print(filter_strings(data))
+
+#13
+def invert_dict_strict(d):
+    result = {}
+    value_count = {}
+    for key in d:
+        value = d[key]
+        if value not in value_count:
+            value_count[value] = 0
+        value_count[value] += 1
+    for key in d:
+        value = d[key]
+        if value_count[value] == 1:
+            result[value] = key
+    return result
+data = {"a": 1, "b": 2, "c": 1}
+print(invert_dict_strict(data))
