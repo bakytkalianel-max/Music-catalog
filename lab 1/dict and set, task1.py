@@ -52,3 +52,17 @@ def filter_sets(sets_list):
     return result
 sets = [{1,2,3,4}, {1,-2,3,4}, {1,3,5,7}, {2,4,6,8}]
 print(filter_sets(sets))
+
+#5
+top_keys = lambda d: [
+    k for k, v in sorted(d.items(), key=lambda x: (-x[1], x[0]))
+][:5]
+data = {
+    "apple": 5,
+    "banana": 8,
+    "cherry": 8,
+    "date": 3,
+    "fig": 10,
+    "grape": 7
+}
+print(top_keys(data))
