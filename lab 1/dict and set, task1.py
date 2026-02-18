@@ -191,3 +191,11 @@ def top_k_frequent(nums, k):
     return result
 nums = [1,1,2,2,2,3,3,4]
 print(top_k_frequent(nums, 2))
+
+#15
+filter_dict = lambda d: {
+    k: v for k, v in d.items()
+    if v >= sum(d.values())/len(d) and v % 2 != 0
+}
+data = {"a": 5, "b": 2, "c": 9, "d": 4}
+print(filter_dict(data))
