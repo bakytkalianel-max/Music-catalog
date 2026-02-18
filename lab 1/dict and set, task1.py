@@ -147,3 +147,11 @@ def group_by_length(words):
     return result
 words = ["cat", "dog", "apple", "car", "dog", "banana"]
 print(group_by_length(words))
+
+#12
+filter_strings = lambda s: {
+    x for x in s
+    if x.isalpha() and len(x) > 4 and len(set(x)) == len(x)
+}
+data = {"apple", "hello", "world", "abcde", "abcda"}
+print(filter_strings(data))
