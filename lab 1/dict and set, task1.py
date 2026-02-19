@@ -209,3 +209,9 @@ clean_dict = lambda d: {
 }
 print(f"С данными: {clean_dict(data)}")
 print(f"Пустой: {clean_dict(empty_data)}")
+
+#17
+clean_dict = lambda d: (
+    lambda avg: {k: v for k, v in d.items() if v >= avg and v % 2 != 0}
+)(sum(d.values()) / len(d) if d else 0)
+print(f"С данными: {clean_dict(data)}")
