@@ -199,3 +199,13 @@ filter_dict = lambda d: {
 }
 data = {"a": 5, "b": 2, "c": 9, "d": 4}
 print(filter_dict(data))
+
+#16
+data = {"a": 10, "b": 21, "c": 33, "d": 4, "e": 55}
+empty_data = {}
+clean_dict = lambda d: {
+    k: v for k, v in d.items()
+    if len(d) > 0 and v >= (sum(d.values()) / len(d)) and v % 2 != 0
+}
+print(f"С данными: {clean_dict(data)}")
+print(f"Пустой: {clean_dict(empty_data)}")
