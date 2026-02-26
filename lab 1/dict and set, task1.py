@@ -277,3 +277,25 @@ data = {
 print(top3_keys(data))
 
 #21
+def count_leaf_values(d):
+    count = 0
+    for value in d.values():
+        if isinstance(value, dict):
+            count += count_leaf_values(value)
+        elif isinstance(value, list):
+            count += len(value)
+        else:
+            count += 1
+    return count
+data = {
+    "a": 5,
+    "b": [1, 2, 3],
+    "c": {
+        "d": 10,
+        "e": [7, 8],
+        "f": {
+            "g": 100
+        }
+    }
+}
+print(count_leaf_values(data))
