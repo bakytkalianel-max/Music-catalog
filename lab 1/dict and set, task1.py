@@ -594,3 +594,17 @@ sets_list = [
     {4, 5}
 ]
 print(multi_symmetric_difference(sets_list))
+
+#39
+vowels = "aeiouAEIOU"
+result = lambda d: sorted(
+    d.keys(),
+    key=lambda k: (sum(1 for ch in k if ch in vowels), -d[k])
+)
+data = {
+    "apple": 5,
+    "sky": 10,
+    "orange": 3,
+    "pear": 8
+}
+print(result(data))
