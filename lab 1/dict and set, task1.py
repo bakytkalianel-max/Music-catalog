@@ -501,3 +501,23 @@ data = {
     "c": [4, 5, 6]
 }
 print(result(data))
+
+#34
+def top_k_smallest_unique(nums, k):
+    unique_nums = []
+    for num in nums:
+        if num not in unique_nums:
+            unique_nums.append(num)
+    n = len(unique_nums)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if unique_nums[j] > unique_nums[j + 1]:
+                unique_nums[j], unique_nums[j + 1] = unique_nums[j + 1], unique_nums[j]
+    result = set()
+    count = 0
+    for num in unique_nums:
+        if count >= k:
+            break
+        result.add(num)
+        count += 1
+    return result
