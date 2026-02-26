@@ -354,3 +354,26 @@ data = {
     "d": [0, -1, 2]
 }
 print(result(data))
+
+#26
+def remove_elements_with_common_digits(s):
+    digit_count = {}
+    for num in s:
+        digits = set(str(abs(num)))
+        for d in digits:
+            if d not in digit_count:
+                digit_count[d] = 0
+            digit_count[d] += 1
+    result = set()
+    for num in s:
+        digits = set(str(abs(num)))
+        has_common = False
+        for d in digits:
+            if digit_count[d] > 1:
+                has_common = True
+                break
+        if not has_common:
+            result.add(num)
+    return result
+s = {123, 456, 178, 890, 345}
+print(remove_elements_with_common_digits(s))
