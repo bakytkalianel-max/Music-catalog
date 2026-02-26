@@ -239,8 +239,8 @@ print(result)
 #19
 def filter_by_digit_sum(nums):
     items_list = []
-    for key in d:
-        values = d[key]
+    for key in nums:
+        values = nums[key]
         total_sum = 0
         for num in values:
             total_sum += num
@@ -252,7 +252,6 @@ def filter_by_digit_sum(nums):
             key2, sum2 = items_list[j + 1]
             if (sum1 < sum2) or (sum1 == sum2 and key1 > key2):
                 items_list[j], items_list[j + 1] = items_list[j + 1], items_list[j]
-
     return items_list
 if __name__ == "__main__":
     data = {
@@ -261,5 +260,20 @@ if __name__ == "__main__":
         "cherry": [5, 5],
         "date": [100]
     }
-result =filter_by_digit_sum(data)
+result = filter_by_digit_sum(data)
 print(result)
+#20
+top3_keys = lambda d: sorted(
+    d.keys(),
+    key=lambda k: (d[k], len(k))
+)[:3]
+data = {
+    "apple": 5,
+    "kiwi": 2,
+    "banana": 2,
+    "pear": 4,
+    "plum": 1
+}
+print(top3_keys(data))
+
+#21
