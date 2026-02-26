@@ -446,3 +446,17 @@ def partition_by_sum_parity(s):
     return (even_sum_set, odd_sum_set)
 s = {12, 33, 41, 7, 20}
 print(partition_by_sum_parity(s))
+
+#31
+result = lambda d: {
+    k: v
+    for k, v in d.items()
+    if len(v) == len(set(v)) and all(len(s) > 3 for s in v)
+}
+data = {
+    "a": ["apple", "pear", "melon"],
+    "b": ["cat", "lion", "tiger"],
+    "c": ["blue", "blue", "green"],
+    "d": ["tree", "rock"]
+}
+print(result(data))
