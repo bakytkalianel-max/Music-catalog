@@ -393,3 +393,20 @@ data = {
     "six": 11
 }
 print(result(data))
+
+#28
+def sorted_unique_chars(strings):
+    unique_chars = set()
+    for s in strings:
+        for ch in s:
+            if not ch.isdigit() and ch != ' ':
+                unique_chars.add(ch)
+    result = list(unique_chars)
+    n = len(result)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if result[j] > result[j + 1]:
+                result[j], result[j + 1] = result[j + 1], result[j]
+    return result
+strings = ["Hello 123", "World 456", "Hi!"]
+print(sorted_unique_chars(strings))
