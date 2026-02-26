@@ -215,3 +215,23 @@ clean_dict = lambda d: (
     lambda avg: {k: v for k, v in d.items() if v >= avg and v % 2 != 0}
 )(sum(d.values()) / len(d) if d else 0)
 print(f"С данными: {clean_dict(data)}")
+
+#18
+def sort_dict_by_value_sum(d):
+    aggregated_list = []
+    for key, values in d.items():
+        current_sum = 0
+        for number in values:
+            current_sum += number
+        aggregated_list.append((key, current_sum))
+    aggregated_list.sort(key=lambda x: (-x[1], x[0]))
+    return aggregated_list
+if __name__ == "__main__":
+    data = {
+        "apple": [10, 20, 30],
+        "banana": [50, 10],
+        "cherry": [5, 5],
+        "date": [100]
+    }
+result = sort_dict_by_value_sum(data)
+print(result)
