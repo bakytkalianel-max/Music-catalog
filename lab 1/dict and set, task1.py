@@ -323,3 +323,18 @@ def group_by_last_letter(words):
     return result
 words = ["apple", "banana", "grape", "avocado", "pineapple", "banana"]
 print(group_by_last_letter(words))
+
+#24
+def union_of_filtered_sets(sets_list):
+    result = set()
+    for s in sets_list:
+        for num in s:
+            if num > 10 and num % 2 != 0:
+                result.add(num)
+    return result
+sets_list = [
+    {5, 11, 14, 17},
+    {3, 9, 13, 20},
+    {21, 8, 10, 15}
+]
+print(union_of_filtered_sets(sets_list))
