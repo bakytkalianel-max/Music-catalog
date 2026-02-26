@@ -460,3 +460,26 @@ data = {
     "d": ["tree", "rock"]
 }
 print(result(data))
+
+#32
+def pairwise_intersections(sets_list):
+    result = []
+
+    if len(sets_list) < 2:
+        return result
+    for i in range(len(sets_list) - 1):
+        set1 = sets_list[i]
+        set2 = sets_list[i + 1]
+        intersection = set()
+        for elem in set1:
+            if elem in set2:
+                intersection.add(elem)
+        result.append(intersection)
+    return result
+sets_list = [
+    {1, 2, 3},
+    {2, 3, 4},
+    {3, 4, 5},
+    {10}
+]
+print(pairwise_intersections(sets_list))
