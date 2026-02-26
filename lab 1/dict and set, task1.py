@@ -557,3 +557,17 @@ def all_subsets_of_size_k(s, k):
 s = {1, 2, 3}
 k = 2
 print(all_subsets_of_size_k(s, k))
+
+#37
+from math import factorial
+result = lambda d: {
+    k: factorial(v) if v < 6 else v
+    for k, v in d.items()
+}
+data = {
+    "a": 3,
+    "b": 5,
+    "c": 6,
+    "d": 2
+}
+print(result(data))
