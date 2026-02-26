@@ -483,3 +483,21 @@ sets_list = [
     {10}
 ]
 print(pairwise_intersections(sets_list))
+
+#33
+result = lambda d: (
+    lambda overall_avg: {
+        k: v
+        for k, v in d.items()
+        if len(v) > 0 and (sum(v) / len(v)) > overall_avg
+    }
+)(
+    sum(sum(v) for v in d.values()) /
+    sum(len(v) for v in d.values())
+)
+data = {
+    "a": [1, 2, 3],
+    "b": [10, 20],
+    "c": [4, 5, 6]
+}
+print(result(data))
