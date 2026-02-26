@@ -521,3 +521,18 @@ def top_k_smallest_unique(nums, k):
         result.add(num)
         count += 1
     return result
+
+#35
+result = lambda d: {
+    k: v
+    for k, v in d.items()
+    if v % 3 != 0 and len(k) % 2 != 0
+}
+data = {
+    "one": 4,
+    "two": 9,
+    "four": 5,
+    "six": 7,
+    "ten": 12
+}
+print(result(data))
