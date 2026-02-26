@@ -571,3 +571,26 @@ data = {
     "d": 2
 }
 print(result(data))
+
+#38
+def multi_symmetric_difference(sets_list):
+    if not sets_list:
+        return set()
+    result = sets_list[0].copy()
+    for i in range(1, len(sets_list)):
+        current_set = sets_list[i]
+        new_result = set()
+        for elem in result:
+            if elem not in current_set:
+                new_result.add(elem)
+        for elem in current_set:
+            if elem not in result:
+                new_result.add(elem)
+        result = new_result
+    return result
+sets_list = [
+    {1, 2, 3},
+    {3, 4},
+    {4, 5}
+]
+print(multi_symmetric_difference(sets_list))
