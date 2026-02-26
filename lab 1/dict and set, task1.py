@@ -377,3 +377,19 @@ def remove_elements_with_common_digits(s):
     return result
 s = {123, 456, 178, 890, 345}
 print(remove_elements_with_common_digits(s))
+
+#27
+is_prime = lambda n: n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+result = lambda d: {
+    k: v
+    for k, v in d.items()
+    if is_prime(v) and len(k) % 2 == 1
+}
+data = {
+    "one": 2,
+    "two": 4,
+    "three": 5,
+    "four": 7,
+    "six": 11
+}
+print(result(data))
