@@ -338,3 +338,19 @@ sets_list = [
     {21, 8, 10, 15}
 ]
 print(union_of_filtered_sets(sets_list))
+
+#25
+from functools import reduce
+from operator import mul
+result = lambda d: {
+    k: reduce(mul, [x for x in v if x > 0], 1)
+    for k, v in d.items()
+    if any(x > 0 for x in v)
+}
+data = {
+    "a": [1, -2, 3],
+    "b": [-5, -10],
+    "c": [4, 5],
+    "d": [0, -1, 2]
+}
+print(result(data))
