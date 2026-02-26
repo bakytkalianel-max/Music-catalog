@@ -235,3 +235,31 @@ if __name__ == "__main__":
     }
 result = sort_dict_by_value_sum(data)
 print(result)
+
+#19
+def filter_by_digit_sum(nums):
+    items_list = []
+    for key in d:
+        values = d[key]
+        total_sum = 0
+        for num in values:
+            total_sum += num
+        items_list.append((key, total_sum))
+    n = len(items_list)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            key1, sum1 = items_list[j]
+            key2, sum2 = items_list[j + 1]
+            if (sum1 < sum2) or (sum1 == sum2 and key1 > key2):
+                items_list[j], items_list[j + 1] = items_list[j + 1], items_list[j]
+
+    return items_list
+if __name__ == "__main__":
+    data = {
+        "apple": [10, 20, 30],
+        "banana": [50, 10],
+        "cherry": [5, 5],
+        "date": [100]
+    }
+result =filter_by_digit_sum(data)
+print(result)
