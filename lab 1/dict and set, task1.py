@@ -308,3 +308,18 @@ result = lambda s1, s2: {
 a = {1, 5, 10, 20}
 b = {2, 4, 6}
 print(result(a, b))
+
+#23
+def group_by_last_letter(words):
+    result = {}
+    for word in words:
+        if not word:
+            continue
+        last_letter = word[-1]
+        if last_letter not in result:
+            result[last_letter] = []
+        if word not in result[last_letter]:
+            result[last_letter].append(word)
+    return result
+words = ["apple", "banana", "grape", "avocado", "pineapple", "banana"]
+print(group_by_last_letter(words))
