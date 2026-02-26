@@ -536,3 +536,24 @@ data = {
     "ten": 12
 }
 print(result(data))
+
+#36
+def all_subsets_of_size_k(s, k):
+    elements = list(s)
+    result = []
+
+    def backtrack(start, current_subset):
+        if len(current_subset) == k:
+            result.append(set(current_subset))
+            return
+        for i in range(start, len(elements)):
+            current_subset.append(elements[i])
+            backtrack(i + 1, current_subset)
+            current_subset.pop()
+    if k > len(s) or k < 0:
+        return []
+    backtrack(0, [])
+    return result
+s = {1, 2, 3}
+k = 2
+print(all_subsets_of_size_k(s, k))
