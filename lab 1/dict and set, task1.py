@@ -299,3 +299,12 @@ data = {
     }
 }
 print(count_leaf_values(data))
+
+#22
+result = lambda s1, s2: {
+    x for x in s1
+    if x > (sum(s2) / len(s2)) and x not in s2
+}
+a = {1, 5, 10, 20}
+b = {2, 4, 6}
+print(result(a, b))
