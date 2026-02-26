@@ -410,3 +410,39 @@ def sorted_unique_chars(strings):
     return result
 strings = ["Hello 123", "World 456", "Hi!"]
 print(sorted_unique_chars(strings))
+
+
+#29
+result = lambda d: sorted(
+    d.keys(),
+    key=lambda k: (abs(d[k]) % 10, k)
+)
+data = {
+    "apple": 23,
+    "banana": 17,
+    "cherry": 34,
+    "date": 27,
+    "fig": 14
+}
+print(result(data))
+
+#30
+def partition_by_sum_parity(s):
+    even_sum_set = set()
+    odd_sum_set = set()
+    for num in s:
+        digit_sum = 0
+        n = abs(num)
+        while n > 0:
+            digit_sum += n % 10
+            n //= 10
+        if num == 0:
+            digit_sum = 0
+
+        if digit_sum % 2 == 0:
+            even_sum_set.add(num)
+        else:
+            odd_sum_set.add(num)
+    return (even_sum_set, odd_sum_set)
+s = {12, 33, 41, 7, 20}
+print(partition_by_sum_parity(s))
