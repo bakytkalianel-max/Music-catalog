@@ -608,3 +608,29 @@ data = {
     "pear": 8
 }
 print(result(data))
+
+#40
+def analyze_dict_keys(d):
+    result = set()
+    for key in d:
+        if not isinstance(key, str):
+            continue
+        has_digit = False
+        for ch in key:
+            if ch.isdigit():
+                has_digit = True
+                break
+        if has_digit:
+            continue
+        for ch in key:
+            if ch != ' ' and ch.isalnum():
+                result.add(ch)
+    return result
+data = {
+    "Hello!": 1,
+    "World123": 2,
+    "Good day.": 3,
+    42: "number",
+    "Test-case": 5
+}
+print(analyze_dict_keys(data))
