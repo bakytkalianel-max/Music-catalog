@@ -34,6 +34,3 @@ with open("high_salary.csv","w", newline="", encoding="utf-8") as f:
     writer = csv.DictWriter(f,fieldnames=["name","department","salary"])
     writer.writeheader()
     writer.writerows(high_salary_employees)
-# # import csv
-# with open("department_avg.csv","w",newline="",encoding="utf-8") as f:
-#     writer.writerows(department_avg)

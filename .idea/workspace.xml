@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change beforePath="$PROJECT_DIR$/lab 1/dict and set, task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 1/dict and set, task1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab 2/practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab 2/transactions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab 2/task 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 2/task 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab 2/task 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 2/task 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab 2/task 3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 2/task 3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab 2/task 4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 2/task 4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,24 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.dict and set, task1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dict and set,tack 2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.f1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.task 1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task 2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task 3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.with.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acer/PycharmProjects/PythonProject/lab 4&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.dict and set, task1.executor": "Run",
+    "Python.dict and set,tack 2.executor": "Run",
+    "Python.f1.executor": "Run",
+    "Python.main.executor": "Debug",
+    "Python.task 1.executor": "Run",
+    "Python.task 2.executor": "Run",
+    "Python.task 3.executor": "Run",
+    "Python.task 4.executor": "Run",
+    "Python.with.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Acer/PycharmProjects/PythonProject/lab 4"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\PycharmProjects\PythonProject\lab 4" />
@@ -406,5 +413,21 @@
     <MESSAGE value="Add solution for task 1(dict and set)" />
     <MESSAGE value="dict and set" />
     <option name="LAST_COMMIT_MESSAGE" value="dict and set" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lab 2/task 1.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lab 2/task 1.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -22,19 +22,18 @@ orders=[
 with open("orders.json","w", encoding="utf-8") as f:
     json.dump(orders,f,indent=4)
 
-
 import json
 with open("orders.json","r", encoding="utf-8") as f:
   orders = json.load(f)
 total_revenue=0
-user_orders={}
+user_orders={} #әр қолданушы неше заказ жасағаны
 items={}
 top_user=""
 most_popular_item=""
 max_orders=0
 for order in orders:
   total_revenue += order["total"]
-  user=order["user"]
+  user=order["user"]  #заказдан адамның атын аламыз
   user_orders[user]=user_orders.get(user,0)+1
   if order["total"]>max_orders:
     max_orders=order["total"]
