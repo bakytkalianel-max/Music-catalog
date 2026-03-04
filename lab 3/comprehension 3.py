@@ -17,3 +17,8 @@ print(a)
 numbers = [1,2,3,4,5]
 a={n: ("четное" if n%2 == 0 else "нечетное") for n in numbers}
 print(a)
+
+#5
+matrix = [[1,2], [3,4], [5,6]]
+a=[n for row in matrix for n in row #для каждой строки row в matrix для каждого числа num в row добавить num
+print(a)
