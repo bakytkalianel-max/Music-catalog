@@ -7,3 +7,8 @@ import math
 matrix = [[1,2,3], [4,5,6], [7,8,9]]
 a=[(lambda row: math.prod(row))(row) for row in matrix]
 print(a)
+
+#3
+words = ["кот", "машина", "ананас", "дом", "спрей"]
+a=[w for w in words if len(w)>4 and "а" not in w]
+print(a)
