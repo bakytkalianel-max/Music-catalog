@@ -20,3 +20,20 @@ def filter_words(words):
 words = ["кот", "машина", "арбуз", "дом","цветы"]
 for w in filter_words(words):
     print(w)
+
+#3
+def infinite_numbers():
+    i = 1
+    while True:
+        if i % 3 == 0 and i % 5 == 0:
+            yield "FizzBuzz"
+        elif i % 3 == 0:
+            yield "Fizz"
+        elif i % 5 == 0:
+            yield "Buzz"
+        else:
+            yield i
+        i += 1
+a=infinite_numbers()
+for x in range(21):
+    print(next(a))
