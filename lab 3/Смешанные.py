@@ -22,3 +22,13 @@ def special_numbers(n):
 
 for x in special_numbers(15):
     print(x)
+
+#2
+words = ["кот", "машина", "арбуз", "дом", "ананас"]
+result=[
+    (lambda w:
+        (w.upper() if len(w) > 4 else "short") + ("*" if "а" in w else "")
+    )(w)
+    for w in words
+]
+print(result)
