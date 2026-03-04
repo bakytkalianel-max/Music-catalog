@@ -12,3 +12,8 @@ print(a)
 words = ["кот", "машина", "ананас", "дом", "спрей"]
 a=[w for w in words if len(w)>4 and "а" not in w]
 print(a)
+
+#4
+numbers = [1,2,3,4,5]
+a={n: ("четное" if n%2 == 0 else "нечетное") for n in numbers}
+print(a)
