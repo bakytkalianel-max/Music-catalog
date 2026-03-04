@@ -43,3 +43,11 @@ def process_numbers(numbers):
 numbers = [5, -2, 8, 0, -7, 3]
 for x in process_numbers(numbers):
     print(x)
+
+#4
+students = [("Иван", 85), ("Анна", 72), ("Пётр", 90), ("Мария", 60)]
+result={
+    name:(lambda x: "Отлично" if x >= 90 else "Хорошо" if x>=70 else "Удовлетворительно")(grade)
+    for name, grade in students
+}
+print(result)
