@@ -24,3 +24,8 @@ compare= lambda a, b:"a больше" if a>b else "b больше" if b>a else "
 print(compare(5,6))
 print(compare(9,8))
 print(compare(3,3))
+
+#6
+numbers = [0, -3, 5, -7, 8]
+numbers_sort=[(lambda x: "положительное" if x>0 else "отрицательное" if x<0 else "ноль") (x) for x in numbers]
+print(numbers_sort)
