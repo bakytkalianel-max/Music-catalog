@@ -32,3 +32,14 @@ result=[
     for w in words
 ]
 print(result)
+
+#3
+def process_numbers(numbers):
+    a=[x for x in numbers]
+    filt=filter(lambda x: x >= 0, a)
+    mapp=map(lambda x: x/2 if x % 2 == 0 else x*3+1, filt)
+    for num  in mapp:
+        yield num
+numbers = [5, -2, 8, 0, -7, 3]
+for x in process_numbers(numbers):
+    print(x)
