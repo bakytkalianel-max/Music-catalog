@@ -51,3 +51,23 @@ result={
     for name, grade in students
 }
 print(result)
+
+#5
+def matrix_transform(matrix):
+    for row in matrix:
+        for x in row:
+            if x % 2 == 0 and x % 3 == 0:
+                yield "Кратно 6"
+            elif x % 2 == 0:
+                yield "четное"
+            elif x % 3 == 0:
+                yield "кратно 3"
+            else:
+                yield x
+matrix = [
+[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]
+]
+for x in matrix_transform(matrix):
+    print(x)
