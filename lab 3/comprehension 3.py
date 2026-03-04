@@ -20,5 +20,15 @@ print(a)
 
 #5
 matrix = [[1,2], [3,4], [5,6]]
-a=[n for row in matrix for n in row #для каждой строки row в matrix для каждого числа num в row добавить num
+a=[n for row in matrix for n in row] #для каждой строки row в matrix для каждого числа num в row добавить num
 print(a)
+
+#6
+result=[
+    "FizzBuzz" if x % 3 == 0 and x % 5 == 0
+    else "Fizz" if x % 3 == 0
+    else "Buzz" if x % 5 == 0
+    else x
+    for x in range(1,21)
+]
+print(result)
