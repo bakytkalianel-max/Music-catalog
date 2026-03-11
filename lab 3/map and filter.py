@@ -7,3 +7,8 @@ print(result)
 word=["anel", "car", "safe", "apple"]
 result=list(map(lambda x:x.upper() + "!" if len(x)>3 else x.upper(), word ))
 print(result)
+
+#3
+nums=[11,12,5,7,8,10,26]
+result=list(filter(lambda x: x%2==0, nums))
+print(result)
