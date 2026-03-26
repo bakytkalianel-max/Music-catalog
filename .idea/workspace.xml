@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change beforePath="$PROJECT_DIR$/lab 4/игроки и предметы.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 4/игроки и предметы.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab 4/События и логирование.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/prac.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,7 @@
     "Python.dict and set, task1.executor": "Run",
     "Python.dict and set,tack 2.executor": "Run",
     "Python.f1.executor": "Run",
+    "Python.flask.executor": "Run",
     "Python.lamdba 1.executor": "Run",
     "Python.main.executor": "Debug",
     "Python.map and filter.executor": "Run",
@@ -59,6 +62,7 @@
     "Python.task 4.executor": "Run",
     "Python.with.executor": "Run",
     "Python.Смешанные.executor": "Run",
+    "Python.События и логирование.executor": "Run",
     "Python.генераторы 2.executor": "Run",
     "Python.игроки и предметы.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
