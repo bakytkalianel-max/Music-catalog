@@ -48,3 +48,9 @@ def squares(n):
             yield b
 for x in squares(5):
     print(x)
+
+
+
+
+
+#2
