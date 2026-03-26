@@ -54,3 +54,30 @@ class Item:
 i = Item(1, " Sword ", 50)
 print(i)
 
+#4
+class Inventory:
+    def __init__(self):
+        self.items = []
+    def add_item(self,item):
+        for i in self.items:
+            if i.id==item.id:
+                return
+        self.items.append(item)
+    def remove_item(self,item_id):
+        self.items = [i for i in self.items if i.id==item_id]
+    def get_items(self):
+        return self.items
+    def unique_items(self):
+        return set(self.items)
+    def to_dict(self):
+        return {item.id: item for item in self.items}
+inv = Inventory()
+
+i1 = Item(1, "Sword", 50)
+i2 = Item(2, "Shield", 30)
+i3 = Item(1, "Sword", 50)
+
+inv.add_item(i1)
+inv.add_item(i2)
+inv.add_item(i3)
+print(len(inv.get_items()))
