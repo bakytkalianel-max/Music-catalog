@@ -1,124 +1,136 @@
-#6
+from flask import Flask, jsonify
+from flasgger import Swagger
 from datetime import datetime
 
+app = Flask(__name__)
+swagger = Swagger(app)
+
 class Event:
-    def __init__(self,type,data):
+    def __init__(self, type, data):
         self.type = type
         self.data = data
         self.timestamp = datetime.now()
     def __str__(self):
         return f"Event(type={self.type},data={self.data},timestamp={self.timestamp})"
-e = Event("ATTACK", {"damage": 20})
-print(e)
+    def to_dict(self):
+        return {
+            "type": self.type,
+            "data": self.data,
+            "timestamp": str(self.timestamp)
+        }
 
-#7
-class Player:
-    def __init__(self,_id,name,hp):
-        self._id = _id
-        self._name = name.strip().title()
-        self._hp = hp if hp>=0  else 0
-        self.inventory = Inventory()
+class Item:
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
     def __str__(self):
-        return f"Player(id={self._id},name={self._name},hp={self._hp})"
-    def __del__(self):
-        print(f"Player {self._name} удалён")
+        return f"{self.name}({self.power})"
 
-    @classmethod
-    def from_string(cls, data: str):
-        parts = data.split(",")
-        parts = [x.strip() for x in parts]
-        if len(parts) != 3:
-            raise ValueError
+class Player:
+    def __init__(self, name, hp):
+        self.name = name
+        self.hp = hp
+        self.inventory = []
 
-        _id = int(parts[0])
-        name = parts[1]
-        hp = int(parts[2])
-
-        return cls(_id, name, hp)
-    def handle_event(self,event):
+    def handle_event(self, event: Event):
         if event.type == "ATTACK":
-            damage = event.data.get("damage",0)
-            self._hp -= damage
+            damage = event.data.get("damage", 0)
+            self.hp -= damage
+
         elif event.type == "HEAL":
-            value = event.data.get("value",0)
-            self._hp += value
+            heal = event.data.get("heal", 0)
+            self.hp += heal
+
         elif event.type == "LOOT":
             item = event.data.get("item")
             if item:
-                self.inventory.add_item(item)
-class Item:
-    def __init__(self,id,name,power):
-        self.id = id
-        self.name = name
-        self.power = power
+                self.inventory.append(item)
+
     def __str__(self):
-        return f"Item(id={self.id},name={self.name},power={self.power})"
-    def __eq__(self, other):
-        return isinstance(other,Item) and self.id == other.id
-    def __hash__(self):
-        return hash(self.id)
-class Inventory:
-    def __init__(self):
-        self.items = []
-    def add_item(self,item):
-        for i in self.items:
-            if i.id==item.id:
-                return
-        self.items.append(item)
-    def remove_item(self,item_id):
-        self.items = [i for i in self.items if i.id==item_id]
-    def get_items(self):
-        return self.items
-    def unique_items(self):
-        return set(self.items)
-    def to_dict(self):
-        return {item.id: item for item in self.items}
-class Event:
-    def __init__(self,type,data):
-        self.type = type
-        self.data = data
-        self.timestamp = datetime.now()
-    def __str__(self):
-        return f"Event(type={self.type},data={self.data},timestamp={self.timestamp})"
+        items = [str(i) for i in self.inventory]
+        return f"{self.name}: hp={self.hp}, items={items}"
 
 class Warrior(Player):
-    def handle_event(self, event):
+    def handle_event(self, event: Event):
         if event.type == "ATTACK":
             damage = event.data.get("damage", 0)
-            reduced_damage = int(damage * 0.9)
-            self._hp -= reduced_damage
+            damage *= 0.9
+            self.hp -= damage
         else:
             super().handle_event(event)
 
 class Mage(Player):
-    def handle_event(self, event):
+    def handle_event(self, event: Event):
         if event.type == "LOOT":
             item = event.data.get("item")
             if item:
-                boosted_item = Item(item.id, item.name, int(item.power * 1.1))
-                self.inventory.add_item(boosted_item)
+                item.power *= 1.1
+                self.inventory.append(item)
         else:
             super().handle_event(event)
 
-warrior = Warrior(3, "max", 100)
-mage = Mage(4, "luna", 100)
+e = None
+p = Player("Hero", 100)
+w = Warrior("Warrior", 100)
+m = Mage("Mage", 100)
 
-attack_event = Event("ATTACK", {"damage": 50})
-heal_event = Event("HEAL", {"value": 30})
-loot_event = Event("LOOT", {"item": Item(5, "Staff", 40)})
+@app.route('/')
+def home():
+    return "сервер работает"
+@app.route('/event/create')
+def create_event():
+    global e
+    e = Event("ATTACK", {"damage": 20})
+    return "Событие создано"
+@app.route('/event/show')
+def show_event():
+    if e:
+        return str(e)
+    return "Событие не создано"
+@app.route('/event/json')
+def show_event_json():
+    if e:
+        return jsonify(e.to_dict())
+    return jsonify({"error": "Событие не создано"})
 
-warrior.handle_event(attack_event)
-warrior.handle_event(heal_event)
-warrior.handle_event(loot_event)
+@app.route('/event/attack')
+def attack():
+    event = Event("ATTACK", {"damage": 20})
+    p.handle_event(event)
+    w.handle_event(event)
+    m.handle_event(event)
+    return jsonify({
+        "Player": str(p),
+        "Warrior": str(w),
+        "Mage": str(m)
+    })
 
-mage.handle_event(attack_event)
-mage.handle_event(loot_event)
+@app.route('/event/heal')
+def heal():
+    event = Event("HEAL", {"heal": 15})
+    p.handle_event(event)
+    w.handle_event(event)
+    m.handle_event(event)
+    return jsonify({
+        "Player": str(p),
+        "Warrior": str(w),
+        "Mage": str(m)
+    })
 
-print(warrior)
-for item in warrior.inventory.get_items():
-    print(item)
+@app.route('/event/loot')
+def loot():
+    item1 = Item("Sword", 50)
+    item2 = Item("Sword", 50)
+    item3 = Item("Sword", 50)
+    p.handle_event(Event("LOOT", {"item": item1}))
+    w.handle_event(Event("LOOT", {"item": item2}))
+    m.handle_event(Event("LOOT", {"item": item3}))
+    return jsonify({
+        "Player": str(p),
+        "Warrior": str(w),
+        "Mage": str(m)
+    })
 
-print(mage)
-for item in mage.inventory.get_items():
-    print(item)
-
+if __name__ == '__main__':
+    app.run(port=9000)
