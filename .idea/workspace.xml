@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change afterPath="$PROJECT_DIR$/lab 4/12,13.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab 4/события 10,11.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 4/события 10,11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab 4/14.15.16.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.12,13.executor": "Run",
+    "Python.14.15.16.executor": "Run",
     "Python.comprehension 3.executor": "Run",
     "Python.dict and set, task1.executor": "Run",
     "Python.dict and set,tack 2.executor": "Run",
