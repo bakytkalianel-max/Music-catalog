@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change afterPath="$PROJECT_DIR$/lab 4/события 7,8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab 4/События и логирование.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 4/События и логирование.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab 4/события 10,11.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,7 @@
     "Python.События и логирование.executor": "Run",
     "Python.генераторы 2.executor": "Run",
     "Python.игроки и предметы.executor": "Run",
+    "Python.события 10,11.executor": "Run",
     "Python.события 7,8.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
