@@ -42,3 +42,8 @@ print(get_categories(products))
 #15
 def unique_categories(categories):
     return len(set(categories))
+#16
+def expensive_prices(products, prices):
+    mean_price = float(np.mean(prices))
+    return [product for product in products if product.price > mean_price]
+
