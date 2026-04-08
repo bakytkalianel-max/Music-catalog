@@ -60,3 +60,9 @@ def orders_array(orders):
         total = sum(product.price for product in order.products)
         result.append([total])
     return np.array(result)
+#19
+def average_order(orders_array):
+    return np.mean(orders_array)
+#20
+def get_expensive_prices(prices):
+    return np.where(prices > 1000)[0]
