@@ -95,3 +95,25 @@ class Logger:
                 }
                 logs.append(log)
         return logs
+
+#7
+class Order:
+    def __init__(self,id: int, user, products=None):
+        self._id = id
+        self.user=user
+        self.products = products if products else []
+    def add_product(self, product):
+        self.products.append(product)
+    def remove_product(self, product_id: int):
+        self.products = [x for x in self.products if x.id != product_id]
+    def total_price(self):
+        return sum(p.price for p in self.products)
+    def __str__(self):
+        return f"Order(id={self._id}, user={self.user}, products={self.products})"
+u = User(1, "John Doe", "john@example.com")
+p1 = Product(1, "Laptop", 1200.0, "Electronics")
+p2 = Product(2, "Mouse", 25.0, "Electronics")
+order = Order(1, u)
+order.add_product(p1)
+order.add_product(p2)
+print(order)
