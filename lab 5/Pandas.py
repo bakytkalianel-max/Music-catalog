@@ -36,3 +36,25 @@ products = [
     Product(2,"T-Shirt",20.0,"Clothing")
 ]
 print(product_dataframe(products))
+
+#23
+def users_orders(users_df, orders_df):
+    merged = pd.merge(
+        orders_df,
+        users_df,
+        left_on="user_id",
+        right_on="id"
+    )
+    merged = merged[["order_id","name","total"]]
+    merged = merged.rename(columns={"name":"user_name"})
+    return merged
+users_df = pd.DataFrame({
+    "id": [1, 2],
+    "name": ["John", "Alice"]
+})
+orders_df = pd.DataFrame({
+    "order_id": [101, 102],
+    "user_id": [1, 2],
+    "total": [1200, 25]
+})
+print((users_df, orders_df))
