@@ -58,3 +58,13 @@ orders_df = pd.DataFrame({
     "total": [1200, 25]
 })
 print((users_df, orders_df))
+
+#24
+def filter_orders(df, value):
+    return df[df["total"] > value]
+df = pd.DataFrame({
+    "order_id": [101, 102],
+    "user_name": ["John", "Alice"],
+    "total": [1200, 25]
+})
+print(filter_orders(df, 100)
