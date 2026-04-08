@@ -110,10 +110,8 @@ class Order:
         return sum(p.price for p in self.products)
     def __str__(self):
         return f"Order(id={self._id}, user={self.user}, products={self.products})"
-u = User(1, "John Doe", "john@example.com")
-p1 = Product(1, "Laptop", 1200.0, "Electronics")
-p2 = Product(2, "Mouse", 25.0, "Electronics")
-order = Order(1, u)
-order.add_product(p1)
-order.add_product(p2)
-print(order)
+#8
+    def most_expensive_products(self, n: int)
+        sorted_products = sorted(self.products, key=lambda p: p.price, reverse=True)
+        return sorted_products[:n]
+
