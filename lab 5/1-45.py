@@ -114,4 +114,8 @@ class Order:
     def most_expensive_products(self, n: int)
         sorted_products = sorted(self.products, key=lambda p: p.price, reverse=True)
         return sorted_products[:n]
+#9
+    def price_stream(products):
+        for p in products:
+            yield p.price
 
