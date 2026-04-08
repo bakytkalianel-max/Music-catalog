@@ -47,3 +47,8 @@ def expensive_prices(products, prices):
     mean_price = float(np.mean(prices))
     return [product for product in products if product.price > mean_price]
 
+#17
+def apply_disconut(prices):
+    return prices * 0.9
+a=np.array([1200.0, 25.0, 450.0])
+print(apply_disconut(a))
