@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change afterPath="$PROJECT_DIR$/lab 5/Numpy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab 5/1-45.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 5/1-10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab 5/Numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 5/Numpy.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,7 @@
     "Python.14.15.16.executor": "Run",
     "Python.17,18.executor": "Run",
     "Python.19,20.executor": "Run",
+    "Python.Numpy.executor": "Run",
     "Python.comprehension 3.executor": "Run",
     "Python.dict and set, task1.executor": "Run",
     "Python.dict and set,tack 2.executor": "Run",
