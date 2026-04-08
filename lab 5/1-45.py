@@ -44,3 +44,25 @@ class Product:
             "price": self._price,
             "category": self._category
         }
+#4
+class Inventory:
+    def __init__(self):
+        self.products = []
+    def add_product(self, product):
+        for x in self.products:
+            if x._id == product._id:
+                return
+        self.products.append(product)
+    def remove_product(self, product_id: int):
+        self.products =[x for x in self.products if x._id != product_id]
+    def get_product(self, product_id: int):
+        for x in self.products:
+            if x._id == product_id:
+                return x
+        return None
+    def get_all_products(self):
+        return self.products
+    def unique_products(self):
+        return set(self.products)
+    def to_dict(self):
+        return {x.id: x for x in self.products}
