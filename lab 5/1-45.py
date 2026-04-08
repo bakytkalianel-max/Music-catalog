@@ -69,3 +69,29 @@ class Inventory:
 #5
     def filter_by_price(self, min_price: float):
         return [p for p in self.products if p.price >= min_price]
+
+#6
+from datetime import datetime
+
+class Logger:
+    def log_action(user: User, action: str, product: Product, filename: str):
+        timestamp = datetime.now()
+        log_line = f"{timestamp};{user_id};{action};{product_id}\n"
+        with open(filename, "a", encoding="utf-8") as f:
+            f.write(log_line)
+    def read_log(self, filename: str):
+        logs = []
+        with open(filename, "r", encoding="utf-8") as f:
+            for line in f:
+                parts = line.strip().split(";")
+
+                if len(parts) != 4:
+                    continue
+                log = {
+                    "timestamp": parts[0],
+                    "user_id": parts[1],
+                    "action": parts[2],
+                    "product_id": parts[3]
+                }
+                logs.append(log)
+        return logs
