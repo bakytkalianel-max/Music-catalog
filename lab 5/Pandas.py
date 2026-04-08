@@ -68,3 +68,15 @@ df = pd.DataFrame({
     "total": [1200, 25]
 })
 print(filter_orders(df, 100)
+
+#25
+def group_orders(df):
+    result =df.groupby("user_name")["total"].sum().reset_index()
+    result = result.rename(columns={"total":"total_sum"})
+    return result
+df = pd.DataFrame({
+    "order_id": [101, 102],
+    "user_name": ["John", "Alice"],
+    "total": [1200, 25]
+})
+print(group_orders(df))
