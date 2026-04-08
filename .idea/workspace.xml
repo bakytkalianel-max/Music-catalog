@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change afterPath="$PROJECT_DIR$/lab 5/Pandas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab 5/Pandas.py" beforeDir="false" afterPath="$PROJECT_DIR$/lab 5/Pandas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,7 @@
     "Python.17,18.executor": "Run",
     "Python.19,20.executor": "Run",
     "Python.Numpy.executor": "Run",
+    "Python.Pandas.executor": "Run",
     "Python.comprehension 3.executor": "Run",
     "Python.dict and set, task1.executor": "Run",
     "Python.dict and set,tack 2.executor": "Run",
