@@ -66,3 +66,6 @@ class Inventory:
         return set(self.products)
     def to_dict(self):
         return {x.id: x for x in self.products}
+#5
+    def filter_by_price(self, min_price: float):
+        return [p for p in self.products if p.price >= min_price]
