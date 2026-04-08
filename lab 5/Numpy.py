@@ -52,3 +52,11 @@ def apply_disconut(prices):
     return prices * 0.9
 a=np.array([1200.0, 25.0, 450.0])
 print(apply_disconut(a))
+
+#18
+def orders_array(orders):
+    result = []
+    for order in orders:
+        total = sum(product.price for product in order.products)
+        result.append([total])
+    return np.array(result)
