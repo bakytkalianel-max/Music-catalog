@@ -38,3 +38,7 @@ products = [
     Product(2,"T-Shirt",20.0,"Clothing")
 ]
 print(get_categories(products))
+
+#15
+def unique_categories(categories):
+    return len(set(categories))
