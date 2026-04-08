@@ -118,4 +118,17 @@ class Order:
     def price_stream(products):
         for p in products:
             yield p.price
+#10
+class OrderIterator:
+    def __init__(self, orders):
+        self.orders = orders
+        self.index = 0
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.index >= len(self.orders):
+            raise StopIteration
 
+        order = self.orders[self.index]
+        self.index += 1
+        return order
