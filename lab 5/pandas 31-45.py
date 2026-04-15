@@ -40,9 +40,17 @@ print(filter_electronics(df))
 import pandas as pd
 df = pd.DataFrame({
     "product_name": ["Laptop", "Mouse", "Shirt"],
-    "category": ["Electronics", "Electronics", "Clothing"]
+    "category": ["Electronics", "Electronics", "Clothing"],
+    "price": [1200, 25, 20]
 })
 def count_products_by_category(df):
     result = df.groupby("category").size().reset_index(name="count")
     return result
 print(count_products_by_category(df))
+
+#35
+def mean_price(df):
+    result = df.groupby("category")["price"].mean().reset_index()
+    result = result.rename(columns={"price": "mean_price"})
+    return result
+print(mean_price(df))
