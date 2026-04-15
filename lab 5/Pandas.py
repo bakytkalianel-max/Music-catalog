@@ -87,3 +87,10 @@ def average_orders(df):
     result = result.rename(columns={"total":"total_mean"})
     return result
 print(average_orders(df))
+
+#27
+def count_orders(df):
+    result = df.groupby("user_name")["order_id"].count().reset_index()
+    result = result.rename(columns={"order_id":"count"})
+    return result
+print(count_orders(df))
