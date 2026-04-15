@@ -160,3 +160,24 @@ def sort_users(df):
         ascending =[False, True]
     )
 print(sort_users(df))
+
+#45
+import pandas as pd
+
+df = pd.DataFrame({
+    "user_name": ["John", "John", "Alice"],
+    "order_id": [101, 103, 102],
+    "total_price": [1200, 500, 25],
+    "category": ["Electronics", "Clothing", "Clothing"]
+})
+def final_report(df):
+    result = df.groupby("user_name").agg(
+        total_orders = ("order_id", "count"),
+        total_sum = ("total_price", "sum"),
+        mean_total = ("total_price", "mean"),
+        max_order = ("total_price", "max"),
+        unique_categories = ("category", "nunique")
+    ).reset_index()
+    result["VIP"] = result["total_sum"] > 1000
+    return result
+print(final_report(df))
