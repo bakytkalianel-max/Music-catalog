@@ -59,3 +59,13 @@ print(mean_price(df))
 def sort_by_price(df):
     return df.sort_values(by="price", ascending=False)
 print(sort_by_price(df))
+
+#37
+import pandas as pd
+df = pd.DataFrame({
+    "order_id": [101, 102, 103, 104],
+    "total_price": [1200, 50, 500, 1500]
+})
+def top_n_orders(df, n=3):
+    return df.sort_values(by="total_price", ascending=False).head(n)
+print(top_n_orders(df, 3))
