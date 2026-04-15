@@ -54,3 +54,8 @@ def mean_price(df):
     result = result.rename(columns={"price": "mean_price"})
     return result
 print(mean_price(df))
+
+#36
+def sort_by_price(df):
+    return df.sort_values(by="price", ascending=False)
+print(sort_by_price(df))
