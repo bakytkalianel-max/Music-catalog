@@ -123,3 +123,15 @@ def max_order_users(df):
     result = result.rename(columns={"total_price": "max_order"})
     return result
 print(max_order_users(df))
+
+#42
+import pandas as pd
+df = pd.DataFrame({
+    "user_name": ["John", "John", "John", "Alice"],
+    "category": ["Electronics", "Electronics", "Clothing", "Clothing"]
+})
+def unique_categories(df):
+    result = df.groupby("user_name")["category"].nunique().reset_index()
+    result = result.rename(columns={"category": "unique"})
+    return result
+print(unique_categories(df))
