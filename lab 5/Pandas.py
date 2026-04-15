@@ -109,3 +109,9 @@ def category_mean_price(df):
     result = result.rename(columns={"price":"mean_price"})
     return result
 print(category_mean_price(df))
+
+#29
+def add_discount(df):
+    df["discount_price"] = df["price"] * 0.9
+    return df
+print(add_discount(df))
