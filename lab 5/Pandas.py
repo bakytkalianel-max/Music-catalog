@@ -115,3 +115,8 @@ def add_discount(df):
     df["discount_price"] = df["price"] * 0.9
     return df
 print(add_discount(df))
+
+#30
+def sort_products(df):
+    return df.sort_values(by="price", ascending=False)
+print(sort_products(df))
