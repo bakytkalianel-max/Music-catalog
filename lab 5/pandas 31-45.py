@@ -35,3 +35,14 @@ df = pd.DataFrame({
 def filter_electronics(df):
     return df[df["category"] == "Electronics"]
 print(filter_electronics(df))
+
+#34
+import pandas as pd
+df = pd.DataFrame({
+    "product_name": ["Laptop", "Mouse", "Shirt"],
+    "category": ["Electronics", "Electronics", "Clothing"]
+})
+def count_products_by_category(df):
+    result = df.groupby("category").size().reset_index(name="count")
+    return result
+print(count_products_by_category(df))
