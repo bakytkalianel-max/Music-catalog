@@ -24,3 +24,14 @@ def add_total_price(df):
     df["total_price"] = df["quantity"] * df["price"]
     return df
 print(add_total_price(df))
+
+#33
+import pandas as pd
+df = pd.DataFrame({
+    "product_name": ["Laptop", "T-Shirt"],
+    "category": ["Electronics", "Clothing"],
+    "price": [1200, 20]
+})
+def filter_electronics(df):
+    return df[df["category"] == "Electronics"]
+print(filter_electronics(df))
