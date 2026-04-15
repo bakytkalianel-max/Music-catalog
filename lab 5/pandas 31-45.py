@@ -69,3 +69,19 @@ df = pd.DataFrame({
 def top_n_orders(df, n=3):
     return df.sort_values(by="total_price", ascending=False).head(n)
 print(top_n_orders(df, 3))
+
+#38
+import pandas as pd
+users = pd.DataFrame({
+    "user_id": [1, 2],
+    "user_name": ["John", "Alice"]
+})
+
+orders = pd.DataFrame({
+    "order_id": [101, 102],
+    "user_id": [1, 2],
+    "total_price": [1200, 50]
+})
+def merge_users_orders(users, orders):
+    return pd.merge(orders, users, on="user_id")
+print(merge_users_orders(users, orders))
