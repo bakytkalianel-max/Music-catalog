@@ -135,3 +135,14 @@ def unique_categories(df):
     result = result.rename(columns={"category": "unique"})
     return result
 print(unique_categories(df))
+
+#43
+import pandas as pd
+df = pd.DataFrame({
+    "user_name": ["John", "Alice"],
+    "total_price": [1200, 500]
+})
+def add_vips(df):
+    df["VIP"] = df["total_price"] > 1000
+    return df
+print(add_vips(df))
