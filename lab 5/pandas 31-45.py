@@ -85,3 +85,16 @@ orders = pd.DataFrame({
 def merge_users_orders(users, orders):
     return pd.merge(orders, users, on="user_id")
 print(merge_users_orders(users, orders))
+
+#39
+import pandas as pd
+
+df = pd.DataFrame({
+    "user_name": ["John", "John", "Alice"],
+    "total_price": [1200, 500, 50]
+})
+def mean_order_users(df):
+    result = df.groupby("user_name")["total_price"].mean().reset_index()
+    result = result.rename(columns={"total_price": "mean_total"})
+    return result
+print(mean_order_users(df))
