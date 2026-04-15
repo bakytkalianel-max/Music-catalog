@@ -146,3 +146,17 @@ def add_vips(df):
     df["VIP"] = df["total_price"] > 1000
     return df
 print(add_vips(df))
+
+#44
+import pandas as pd
+df = pd.DataFrame({
+    "user_name": ["John", "Alice", "Bob"],
+    "total_sum": [1700, 25, 1700],
+    "mean_total": [850, 25, 600]
+})
+def sort_users(df):
+    return df.sort_values(
+        by = ["total_sum", "mean_total"],
+        ascending =[False, True]
+    )
+print(sort_users(df))
