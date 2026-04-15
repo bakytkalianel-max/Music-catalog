@@ -94,3 +94,18 @@ def count_orders(df):
     result = result.rename(columns={"order_id":"count"})
     return result
 print(count_orders(df))
+
+#28
+import pandas as pd
+
+df = pd.DataFrame({
+    "id": [1, 2, 3],
+    "name": ["Laptop", "Mouse", "Shirt"],
+    "category": ["Electronics", "Electronics", "Clothing"],
+    "price": [1200, 25, 20]
+})
+def category_mean_price(df):
+    result =df.groupby("category")["price"].mean().reset_index()
+    result = result.rename(columns={"price":"mean_price"})
+    return result
+print(category_mean_price(df))
