@@ -111,3 +111,15 @@ def count_orders(df):
     result = result.rename(columns={"order_id": "count"})
     return result
 print(count_orders(df))
+
+#41
+import pandas as pd
+df = pd.DataFrame({
+    "user_name": ["John", "John", "Alice"],
+    "total_price": [1200, 50, 500]
+})
+def max_order_users(df):
+    result = df.groupby("user_name")["total_price"].max().reset_index()
+    result = result.rename(columns={"total_price": "max_order"})
+    return result
+print(max_order_users(df))
