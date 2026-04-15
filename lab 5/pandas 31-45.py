@@ -98,3 +98,16 @@ def mean_order_users(df):
     result = result.rename(columns={"total_price": "mean_total"})
     return result
 print(mean_order_users(df))
+
+#40
+import pandas as pd
+
+df = pd.DataFrame({
+    "user_name": ["John", "John", "Alice"],
+    "order_id": [101, 103, 102]
+})
+def count_orders(df):
+    result = df.groupby("user_name")["order_id"].count().reset_index()
+    result = result.rename(columns={"order_id": "count"})
+    return result
+print(count_orders(df))
