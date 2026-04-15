@@ -67,7 +67,7 @@ df = pd.DataFrame({
     "user_name": ["John", "Alice"],
     "total": [1200, 25]
 })
-print(filter_orders(df, 100)
+print(filter_orders(df, 100))
 
 #25
 def group_orders(df):
@@ -80,3 +80,10 @@ df = pd.DataFrame({
     "total": [1200, 25]
 })
 print(group_orders(df))
+
+#26
+def average_orders(df):
+    result =df.groupby("user_name")["total"].mean().reset_index()
+    result = result.rename(columns={"total":"total_mean"})
+    return result
+print(average_orders(df))
