@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(135deg, #07111f, #0b3d2e);
+  color: white;
+}
+
+h1 {
+  margin-top: 30px;
+}
+
+.wheel-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 40px auto;
+}
+
+.pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #ffd700;
+}
+
+#wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid white;
+  transition: transform 4s ease-out;
+  position: relative;
+
+  background: conic-gradient(
+    #00c896 0deg 60deg,
+    #0099ff 60deg 120deg,
+    #ff7b00 120deg 180deg,
+    #8e44ad 180deg 240deg,
+    #e84393 240deg 300deg,
+    #f1c40f 300deg 360deg
+  );
+}
+
+.label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.l1 { transform: rotate(30deg) translate(70px, -10px); }
+.l2 { transform: rotate(90deg) translate(70px, -10px); }
+.l3 { transform: rotate(150deg) translate(70px, -10px); }
+.l4 { transform: rotate(210deg) translate(70px, -10px); }
+.l5 { transform: rotate(270deg) translate(70px, -10px); }
+.l6 { transform: rotate(330deg) translate(70px, -10px); }
+
+button {
+  padding: 14px 40px;
+  font-size: 20px;
+  background: #00c896;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00a77d;
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 20px;
+}

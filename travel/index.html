@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-    <meta charset="UTF-8">
-    <title>Ақылды маршрут генераторы</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8fb;
-            padding: 40px;
-        }
+<meta charset="UTF-8">
+<title>Kazakhstan Travel Wheel</title>
 
-        .box {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-        }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  text-align: center;
+  background: #07111f;
+  color: white;
+}
 
-        select, button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0 20px;
-        }
+h1 {
+  margin-top: 30px;
+}
 
-        button {
-            background: #0b8f6a;
-            color: white;
-            border: none;
-            border-radius: 8px;
-        }
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+}
 
-        .result {
-            background: #eefaf6;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-    </style>
+.pointer {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+}
+
+#wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid white;
+  transition: transform 4s ease-out;
+  background: conic-gradient(
+    #00c896 0deg 60deg,
+    #0099ff 60deg 120deg,
+    #ff7b00 120deg 180deg,
+    #8e44ad 180deg 240deg,
+    #e84393 240deg 300deg,
+    #f1c40f 300deg 360deg
+  );
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 18px;
+  background: #00c896;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 30px;
+}
+</style>
 </head>
+
 <body>
 
-<div class="box">
-    <h2>Ақылды маршрут генераторы</h2>
+<h1>Kazakhstan Travel Wheel</h1>
 
-    <form method="POST">
-        <label>Қаланы таңдаңыз:</label>
-        <select name="city">
-            <option value="almaty">Алматы</option>
-            <option value="astana">Астана</option>
-            <option value="turkistan">Түркістан</option>
-        </select>
-
-        <label>Күн саны:</label>
-        <select name="days">
-            <option value="1">1 күн</option>
-            <option value="2">2 күн</option>
-            <option value="3">3 күн</option>
-        </select>
-
-        <label>Қызығушылық:</label>
-        <select name="interest">
-            <option value="nature">Табиғат</option>
-            <option value="history">Тарих</option>
-        </select>
-
-        <button type="submit">Маршрут құру</button>
-    </form>
-
-    {% if result %}
-        <div class="result">
-            <h3>Сіздің маршрутыңыз:</h3>
-            {% for item in result %}
-                <p>{{ item }}</p>
-            {% endfor %}
-        </div>
-    {% endif %}
+<div class="wheel-container">
+  <div class="pointer">▼</div>
+  <div id="wheel"></div>
 </div>
+
+<button onclick="spin()">SPIN</button>
+
+<div class="result" id="result"></div>
+
+<script>
+let rotation = 0;
+
+const places = [
+  "Алматы",
+  "Маңғыстау",
+  "Түркістан",
+  "Көлсай",
+  "Шарын",
+  "Бурабай"
+];
+
+function spin() {
+  const wheel = document.getElementById("wheel");
+  const result = document.getElementById("result");
+
+  const randomIndex = Math.floor(Math.random() * places.length);
+  const deg = 360 / places.length;
+
+  // дәл секторға тоқтайды
+  const finalDeg = 360 * 6 + (360 - randomIndex * deg - deg / 2);
+
+  rotation += finalDeg;
+
+  wheel.style.transform = rotate(${rotation}deg);
+
+  result.innerHTML = "Айналып жатыр...";
+
+  setTimeout(() => {
+    result.innerHTML = `
+      <h2>Сенің бағытың: ${places[randomIndex]}</h2>
+    `;
+  }, 4000);
+}
+</script>
+
 </body>
 </html>
