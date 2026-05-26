@@ -42,3 +42,15 @@ print(top_awards[["Title", "Artist", "Awards_won", "Awards_nominated", "total_aw
 #6
 top_tracks.to_excel("student1_top_tracks.xlsx", index=False)
 print("\nФайл student1_top_tracks.xlsx успешно сохранён")
+
+#7
+song_1_tracks = df[df["Title"].str.contains("Song_1", case=False, na=False)]
+print(song_1_tracks[["Title", "Artist", "Genre", "User_Rating"]])
+
+#8
+top_streams = df.sort_values(by="Streams_million", ascending=False).head(10)
+print("\nТоп-10 по стримам:")
+print(top_streams[["Title", "Artist", "Streams_million"]])
+shortest_tracks = df.sort_values(by="Duration_sec", ascending=True).head(10)
+print("\n10 самых коротких треков:")
+print(shortest_tracks[["Title", "Artist", "Duration_sec"]])
