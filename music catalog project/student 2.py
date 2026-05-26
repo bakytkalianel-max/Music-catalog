@@ -57,3 +57,25 @@ top_3_explicit = sorted(
 )[:3]
 print("\nТоп-3 жанра по explicit-трекам:")
 print(top_3_explicit)
+
+#2.5
+artist_album_set = set(zip(df["Artist"], df["Album"]))
+print("\nКоличество уникальных комбинаций Artist + Album:")
+print(len(artist_album_set))
+
+#2.6
+df["streams_per_award"] = df.apply(
+    lambda row: row["Streams_million"] / (row["Awards_won"] + 1),
+    axis=1
+)
+high_efficiency = (
+    row for _, row in df[df["streams_per_award"] >= 50].iterrows()
+)
+result = []
+for i, row in enumerate(high_efficiency):
+    if i == 10:
+        break
+    result.append(row)
+result_df = pd.DataFrame(result)
+print("\nПервые 10 треков high_efficiency:")
+print(result_df[["Title", "Artist", "Streams_million", "streams_per_award"]])
