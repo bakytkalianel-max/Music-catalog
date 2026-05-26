@@ -32,3 +32,28 @@ for col in stat_columns:
     print(f"mean = {mean_value}")
     print(f"median = {median_value}")
     print(f"std = {std_value}")
+
+#2.3
+streams = df["Streams_million"].to_numpy()
+ratings = df["User_Rating"].to_numpy()
+indexes = np.where((streams > 200) & (ratings >= 8))[0]
+popular_tracks = df.iloc[indexes]
+
+print("Первые 10 популярных треков:")
+print(popular_tracks[["Title", "Artist", "Streams_million", "User_Rating"]].head(10))
+
+# 2.4
+explicit_by_genre = {}
+for genre in df["Genre"].unique():
+    count = df[(df["Genre"] == genre) & (df["Explicit"] == 1)].shape[0]
+    explicit_by_genre[genre] = count
+print("\nКоличество explicit-треков по жанрам:")
+print(explicit_by_genre)
+
+top_3_explicit = sorted(
+    explicit_by_genre.items(),
+    key=lambda x: x[1],
+    reverse=True
+)[:3]
+print("\nТоп-3 жанра по explicit-трекам:")
+print(top_3_explicit)
