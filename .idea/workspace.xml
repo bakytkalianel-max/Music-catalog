@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="dicy and set,task 2">
-      <change afterPath="$PROJECT_DIR$/lab 1/prac1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lab 5/prac lab 5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travel/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="remove unnecessary files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -408,11 +401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1770445261611</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="remove unnecessary files">
+      <option name="closed" value="true" />
+      <created>1779791064423</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1779791064423</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add solution for task 6" />
     <MESSAGE value="Add solution for task 7" />
     <MESSAGE value="Add solution for task 8" />
     <MESSAGE value="Add solution for task 9" />
@@ -437,7 +437,8 @@
     <MESSAGE value="Add solution for task 30" />
     <MESSAGE value="Add solution for task 1(dict and set)" />
     <MESSAGE value="dict and set" />
-    <option name="LAST_COMMIT_MESSAGE" value="dict and set" />
+    <MESSAGE value="remove unnecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
