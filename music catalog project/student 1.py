@@ -9,3 +9,11 @@ print("\nТипы данных:")
 print(df.dtypes)
 print("\nПропуски:")
 print(df.isnull().sum())
+
+#2
+genre_list = df["Genre"].unique().tolist()
+key_list = df["Key"].unique().tolist()
+print("\nУникальные жанры:")
+print(genre_list)
+print("\nУникальные ключи:")
+print(key_list)
