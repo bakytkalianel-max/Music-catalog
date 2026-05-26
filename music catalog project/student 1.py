@@ -32,3 +32,13 @@ top_tracks = df[
 ]
 print("\nТоп популярных треков:")
 print(top_tracks[["Title","Artist","Streams_million","User_Rating"]].head(10))
+
+#5
+df["total_awards"] = df["Awards_won"] + df["Awards_nominated"]
+top_awards = df.sort_values(by="total_awards", ascending=False).head(10)
+print("\nТоп-10 треков по наградам:")
+print(top_awards[["Title", "Artist", "Awards_won", "Awards_nominated", "total_awards"]])
+
+#6
+top_tracks.to_excel("student1_top_tracks.xlsx", index=False)
+print("\nФайл student1_top_tracks.xlsx успешно сохранён")
