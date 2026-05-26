@@ -54,3 +54,22 @@ print(top_streams[["Title", "Artist", "Streams_million"]])
 shortest_tracks = df.sort_values(by="Duration_sec", ascending=True).head(10)
 print("\n10 самых коротких треков:")
 print(shortest_tracks[["Title", "Artist", "Duration_sec"]])
+
+#9
+df["streams_per_award"] = df["Streams_million"] / (df["total_awards"] + 1)
+top_streams_per_award = df.sort_values(by="streams_per_award", ascending=False).head(5)
+print("\nТоп-5 по streams_per_award:")
+print(top_streams_per_award[["Title", "Artist", "Streams_million", "total_awards", "streams_per_award"]])
+
+#10
+pop_generator = (
+    row for _, row in df[df["Genre"] == "Pop"].iterrows()
+)
+pop_tracks = []
+for i, row in enumerate(pop_generator):
+    if i == 20:
+        break
+    pop_tracks.append(row)
+pop_tracks_df = pd.DataFrame(pop_tracks)
+print("\nПервые 20 треков жанра Pop:")
+print(pop_tracks_df[["Title", "Artist", "Genre", "Streams_million"]])
