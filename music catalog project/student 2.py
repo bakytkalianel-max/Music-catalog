@@ -105,3 +105,63 @@ df.to_excel("student2_music_analysis.xlsx", index=False)
 check_df = pd.read_excel("student2_music_analysis.xlsx")
 print("\nПроверка чтения файла:")
 print(check_df.head())
+
+#2.9
+import matplotlib.pyplot as plt
+import seaborn as sns
+plt.figure(figsize=(8, 5))
+plt.hist(df["User_Rating"], bins=20)
+plt.title("Distribution of User Rating")
+plt.xlabel("User Rating")
+plt.ylabel("Count")
+plt.grid(True)
+plt.savefig("user_rating_histogram.png")
+plt.show()
+
+plt.figure(figsize=(10, 6))
+genres = df["Genre"].unique()
+for genre in genres:
+    genre_data = df[df["Genre"] == genre]
+    plt.scatter(
+        genre_data["Streams_million"],
+        genre_data["Popularity"],
+        label=genre,
+        alpha=0.6
+    )
+plt.title("Streams vs Popularity")
+plt.xlabel("Streams_million")
+plt.ylabel("Popularity")
+plt.legend()
+plt.grid(True)
+plt.savefig("streams_vs_popularity.png")
+plt.show()
+
+#2.10
+plt.figure(figsize=(10, 6))
+sns.countplot(data=df, x="Genre")
+plt.title("Count of Tracks by Genre")
+plt.xticks(rotation=45)
+plt.savefig("genre_countplot.png")
+plt.show()
+
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x="Genre", y="streams_per_award")
+plt.title("Streams per Award by Genre")
+plt.xticks(rotation=45)
+plt.savefig("streams_per_award_boxplot.png")
+plt.show()
+
+plt.figure(figsize=(8, 6))
+corr_columns = [
+    "User_Rating",
+    "Streams_million",
+    "Duration_sec",
+    "BPM",
+    "Popularity"
+]
+correlation = df[corr_columns].corr()
+sns.heatmap(correlation, annot=True, cmap="coolwarm")
+plt.title("Correlation Heatmap")
+plt.savefig("correlation_heatmap.png")
+plt.show()
+print("\nВсе графики сохранены в PNG.")
