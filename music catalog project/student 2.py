@@ -79,3 +79,29 @@ for i, row in enumerate(high_efficiency):
 result_df = pd.DataFrame(result)
 print("\nПервые 10 треков high_efficiency:")
 print(result_df[["Title", "Artist", "Streams_million", "streams_per_award"]])
+
+#2.7
+df["streams_per_award"] = df["Streams_million"] / (df["Awards_won"] + 1)
+rating_pivot = pd.pivot_table(
+    df,
+    index="Genre",
+    columns="Year",
+    values="User_Rating",
+    aggfunc="mean"
+)
+efficiency_pivot = pd.pivot_table(
+    df,
+    index="Genre",
+    columns="Year",
+    values="streams_per_award",
+    aggfunc="mean"
+)
+rating_pivot.to_csv("student2_rating_pivot.csv")
+efficiency_pivot.to_csv("student2_efficiency_pivot.csv")
+print("Сводные таблицы сохранены.")
+
+#2.8
+df.to_excel("student2_music_analysis.xlsx", index=False)
+check_df = pd.read_excel("student2_music_analysis.xlsx")
+print("\nПроверка чтения файла:")
+print(check_df.head())

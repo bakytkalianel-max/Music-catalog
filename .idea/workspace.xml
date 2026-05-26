@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="remove unnecessary files" />
+    <list default="true" id="864c3f42-30eb-4d08-ae6e-02cc7ef9f39b" name="Changes" comment="remove unnecessary files">
+      <change beforePath="$PROJECT_DIR$/music catalog project/student 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/music catalog project/student 2.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +74,7 @@
     "Python.prac.executor": "Run",
     "Python.prac1.executor": "Run",
     "Python.student 1.executor": "Run",
+    "Python.student 2.executor": "Run",
     "Python.task 1.executor": "Run",
     "Python.task 2.executor": "Run",
     "Python.task 3.executor": "Run",
